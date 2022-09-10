@@ -1,32 +1,41 @@
 #include <stdio.h>
+/*
+ * 100-print_comb3.c
+ *
+ * Description:
+ * This program prints
+ * "some of" the base 10 numbers in order
+ * from 0 to 99
+ * No vars of type char ...
+ */
+
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: always return 0
- *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
-	int j;
+	int i, j, offset;
 
-	for (i = 10; i <= 19; i++)
+	offset = 48;
+
+	for (i = 0; i < 10; i++)
 	{
-		for (j = 10; j <= 19; j++)
+		for (j = i; j < 10; j++)
 		{
-			if ((j % 10) > (i % 10))
+			if (!(i == j))
 			{
-				putchar((i % 10) + '0');
-			        putchar((j % 10) + '0');
-			        if (i != 18 || j != 19)
+				putchar(i + offset);
+				putchar(j + offset);
+				if (!((i == 8) && (j == 9)))
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(44);
+					putchar(32);
 				}
 			}
-
 		}
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
