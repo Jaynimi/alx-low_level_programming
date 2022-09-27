@@ -18,8 +18,3 @@ void print_diagsums(int *a, int size)
 	}
 	printf("%d, %d\n", diagO, diagT);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
-
