@@ -13,8 +13,3 @@ void _puts_recursion(char *s)
 	else
 		_putchar('\n');
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
-
